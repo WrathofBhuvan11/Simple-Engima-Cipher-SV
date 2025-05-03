@@ -55,14 +55,24 @@ The output will be the encrypted letter based on the machine's configuration.
 ### -------------------------------------------------------------------------------------------------------------------------
 ## Verification with UVM
 Interface	  	   |	enigma_if.sv	   			    |  Defines the signals connecting the testbench to the DUT.
+
 Sequence Item 	 |	enigma_seq_item.sv 		  	|  Encapsulates transaction data (input letter, rotor positions, output).
+
 Sequence		     |	enigma_sequence.sv	   		|  Generates a series of transactions with updated rotor positions.
+
 Reference Model	 |  enigma_ref_model.sv	  		|  Software model to predict expected outputs.
+
 Driver	         |  enigma_driver.sv	        |  Drives input signals to the DUT based on sequence items.
+
 Monitor	         |  enigma_monitor.sv	        |  Observes DUT outputs and sends transactions to the scoreboard.
+
 Scoreboard	     |  enigma_scoreboard.sv	    |  Compares actual outputs with expected outputs from the reference model.
+
 Agent	           |  enigma_agent.sv	          |  Groups driver, monitor, and sequencer for a cohesive interface.
+
 Environment	     |  enigma_env.sv	            |  Contains agents and scoreboards for the verification environment.
+
 Test	           |  enigma_test.sv	          |  Configures the environment and initiates the sequence.
+
 Top Module	     |  top.sv	                  |  Connects the DUT, interface, and testbench, starting the simulation.
 
