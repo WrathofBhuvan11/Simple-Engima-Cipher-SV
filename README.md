@@ -40,7 +40,7 @@ Input: 26-bit one-hot vector
 Output: 26-bit one-hot vector after involutory permutation
 Implemented similarly to the plugboard with pairwise swaps.
 
-Usage
+### Usage
 To use this Enigma machine emulation:
 Set the rotor positions using the n1, n2, and n3 inputs (5-bit values representing positions 0 to 25).
 Provide the input letter as a 26-bit one-hot encoded vector.
