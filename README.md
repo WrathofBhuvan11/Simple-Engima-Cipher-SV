@@ -53,7 +53,7 @@ Input letter A: input_letter = 26'b000...001
 
 The output will be the encrypted letter based on the machine's configuration.
 ### -------------------------------------------------------------------------------------------------------------------------
-## Verification with UVM
+## Verification with UVM (further changes required)
 Interface	  	   |	enigma_if.sv	   			    |  Defines the signals connecting the testbench to the DUT.
 
 Sequence Item 	 |	enigma_seq_item.sv 		  	|  Encapsulates transaction data (input letter, rotor positions, output).
