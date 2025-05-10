@@ -61,7 +61,7 @@ module enigma (
     rotor #(.ROTOR_TYPE(2'b01)) r2_fwd (.in(after_rotor1_fwd), .n(n2_stage1), .direction(0), .out(after_rotor2_fwd));
     rotor #(.ROTOR_TYPE(2'b10)) r3_fwd (.in(reg1), .n(n3_stage2), .direction(0), .out(after_rotor3_fwd));
     
-    reflector ref (.in(after_rotor3_fwd), .out(after_reflector));
+    reflector ref_inst (.in(after_rotor3_fwd), .out(after_reflector));
     
     rotor #(.ROTOR_TYPE(2'b10)) r3_inv (.in(after_reflector), .n(n3_stage2), .direction(1), .out(after_rotor3_inv));
     rotor #(.ROTOR_TYPE(2'b01)) r2_inv (.in(reg2), .n(n2_stage3), .direction(1), .out(after_rotor2_inv));
